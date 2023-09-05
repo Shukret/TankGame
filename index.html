@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Tank Game</title>
+    <title>2D Tanks</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
@@ -141,15 +141,7 @@
                               {
                                   console.log("LOAD");
                                   console.log(data.keys[0].value);
-                                  //if (data.keys[0].value !== null && data.keys[0].value != '')
-                                  //{
-                                      myGameInstance.SendMessage('Init', 'SetPlayerData', data.keys[0].value);
-                                  //}
-                                  //else
-                                  //{
-                                  //  console.log("First load");
-                                  //  myGameInstance.SendMessage('Init', 'FirstLoadVK');
-                                  //}
+                                  myGameInstance.SendMessage('Init', 'SetPlayerData', data.keys[0].value);
                               }
                             })
                             .catch((error) => {
